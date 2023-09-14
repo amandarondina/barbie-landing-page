@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hi, Barbie!</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap');
+      :root {
+        --pink: #ec4399;
+        --babyPink: #fff5f7;
+      }
+      
+
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background-color: var(--babyPink);
+      }
+
+
+
+      nav {
+        display: flex;
+        width: 100%;
+        max-width: 36rem;
+        justify-content: space-around;
+        background-color: #ffff;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        position: absolute;
+        top: 99%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 1px 1px 4px rgba(110, 110, 110, 0.357);
+      }
+
+      img{
+        box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.208);
+      }
+
+      /* -- home section start --*/
+      .nav-link {
+        color: var(--pink);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.89rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      #home {
+        color: var(--pink);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90dvh;
+      }
+   
+      
+      .header-title {
+        height: 10%;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 50rem;
+        justify-content: space-between;
+        text-transform: uppercase;
+      }
+      .header-body {
+        border: 3px solid var(--pink);
+        border-radius: 4rem;
+        position: relative;
+        top: 3rem;
+        width: 100%;
+        max-width: 60rem;
+        height: 28rem;
+        background-color: black;
+        background-image: url("https://i.postimg.cc/7Zrptj8r/header.png");
+        background-size: cover ;
+        background-position: center;
+      }
+      .watch {
+        font-size: 0.8rem;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        height: 4rem;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.260);
+      }
+      #play {
+        width: 20rem;
+        stroke-width: 4px;
+        cursor: pointer;
+        filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.260));
+      }
+
+      .header-image {
+        width: 15rem;
+        transform: rotate(10deg);
+      }
+      @media screen and (max-width: 640px) {
+  .watch{
+    top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+  }
+  
+}
+
+      /* -- home section end --*/
+
+
+/* -- cast section start --*/
+      #cast {
+        color: #ffff;
+    
+      }
+
+      
+.container {
+  overflow: hidden;
+ padding-top: 5rem;
+ padding-bottom: 5rem;
+  width: 100%;
+  background-color: var(--pink);
+ clip-path: ellipse(100% 45% at 50% 50%);
+ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+}
+
+.card-carousel {
+  --card-width: 80%;
+  --card-max-width: 280px;
+  --card-height: 350px;
+  --carousel-min-width: 600px;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  transition: filter 0.3s ease;
+}
+
+@media screen and (max-width: 640px) {
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2);
+  }
+}
+
+.card-carousel.smooth-return {
+  transition: all 0.2s ease;
+}
+
+.card-carousel .card {
+  background: whitesmoke;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  padding: 5px;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.207);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.208);
+  border-radius: 1em;
+  filter: brightness(0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.highlight {
+  filter: brightness(1);
+}
+
+.card:nth-of-type(1) .image-container {
+  background-image: url("https://imageupload.io/ib/6zeET3UkDACWOa2_1694693357.jpg");
+}
+
+.card:nth-of-type(2) .image-container {
+  background-image: url("https://imageupload.io/ib/wcNyApqtzcaN6SL_1694693357.webp");
+}
+
+.card:nth-of-type(3) .image-container {
+  background-image: url("https://i.postimg.cc/YSbZ994t/cast-3.webp");
+}
+.card:nth-of-type(4) .image-container {
+  background-image: url("https://i.postimg.cc/W3yyGH6K/cast-4.webp");
+}
+.card:nth-of-type(5) .image-container {
+  background-image: url("https://i.postimg.cc/cHCj8SYw/cast-5.webp");
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  border-radius: 10px;
+}
+/* -- cast section end --*/
+
+
+
+
+      .title {
+        font-size: 5.5rem;
+        font-weight: 500;
+        font-style: italic;
+        font-family: 'Lobster Two';
+      }
+
+   
+
+      button {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 0.9rem 1.2rem;
+        border-radius: 100%;
+        border: none;
+        text-decoration: none;
+        color: white;
+        background-color: var(--pink);
+        cursor: pointer;
+      }
+
+    /* -- synopsis section start --*/  
+
+      .synopsis-container {
+        width: 100%;
+        margin: auto;
+        max-width: 75rem;
+        padding-top: 5rem;
+        color: rgb(80, 79, 79);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .top {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 2rem;
+        color: var(--pink);
+      }
+
+      .cont-top {
+        width: 49%;
+        min-width: 30rem;
+        display: flex;
+        flex-direction: column;
+        
+      }
+      .paragraph-bg {
+        font-size: 0.8rem;
+        margin-top: 3rem;
+        color: white;
+        background-color: var(--pink);
+        padding: 2rem 15rem 2rem 2rem;
+        border-radius: 30px 0 0 30px;
+      }
+
+      .top-img {
+        width:50%;
+        min-width: 30rem;
+        height: 0%;
+        border-radius: 10px;
+      }
+      .middle-text {
+        width: 70%;
+        font-size: 0.8rem;
+      }
+
+      .middle {
+        height: 70dvh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .middle-img {
+        max-height: 30rem;
+        min-height: 10rem;
+        width: 100%;
+        min-width: 30rem;
+        object-fit: cover;
+        object-position: 100% 0;
+        border-radius: 10px;
+      }
+      .span-middle {
+        font-weight: bold;
+        color: var(--pink);
+      }
+
+      .bottom {
+        height: 100dvh;
+        width: 100%;
+        max-width: 75rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .bottom-left {
+        width: 70%;
+        max-width: 65rem;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .text-left {
+
+        line-height: 1.5;
+        font-size: 0.76rem;
+        width: 97%;
+        color: white;
+        background-color: var(--pink);
+        padding: 2rem 2rem 2rem 13rem;
+        border-radius: 0 30px 30px 0;
+      }
+      .text-center {
+        margin-left: 8rem;
+        font-size: .8rem;
+        line-height: 1.7;
+      
+      }
+      .bottom-right {
+        width: 30%;
+        max-width: 20rem;
+        align-self: center;
+      }
+      .bottom-img {
+        width: 100%;
+        max-width: 50rem;
+        border-radius: 10px;
+      }
+
+      .right {
+        width: 100%;
+      }
+
+
+      .bottom-bottom{
+       line-height: 1.5;
+        color: var(--pink);
+        font-size: .8rem;
+        text-align: center;
+        width: 100%;
+        max-width: 65rem;
+        margin: 7rem auto;
+        background-color: white;
+        padding: 3.5rem 6rem;
+        border-radius: 20px;
+      }
+
+      @media screen and (max-width: 1120px) {
+
+        .bottom-img{
+         width: 120%;
+         margin-left: 1rem;
+          border: 2px solid green;
+        }
+  .right{
+    display: none;
+  }
+
+  .paragraph-bg{
+    padding: 1rem;
+  }
+  .text-left{
+    padding: 1rem;
+  }
+
+  .text-center{
+    margin-left: 2rem;
+  }
+}
+
+
+
+
+      /* -- synopsis section end --*/
+
+
+      /* -- gallery section start --*/
+      #gallery {
+        height: 60dvh;
+        display: flex;
+        flex-direction: column;
+      }
+      .gallery-top {
+        color: var(--pink);
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        justify-content: space-between;
+      }
+      .gallery-body {
+        margin: auto;
+        width: 100%;
+        max-width: 1000px;
+        display: flex;
+        overflow-x: scroll;
+      }
+      .gallery-body::-webkit-scrollbar {
+        display: none;
+      }
+      .gallery-body div {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        flex: none;
+        padding: 3rem;
+      }
+      .gallery-body div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 100% 0;
+        border: 3px solid var(--pink);
+        border-radius: 10px;
+      }
+      .gallery-body div img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+
+      /* -- gallery section end --*/
+
+      /* -- footer section start --*/
+
+      footer {
+        margin: 5rem auto;
+        width: 60%;
+        color: rgb(181, 178, 178);
+        text-transform: uppercase;
+      }
+      .footer-credits {
+        font-family: Monaco;
+        font-size: .8rem;
+        margin: auto;
+        text-align: center;
+      }
+      .footer-span {
+        color: rgb(148, 142, 142);
+        font-size: 1.6rem;
+      }
+
+      /* -- footer section end --*/
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="home">
+        <div class="header-title">
+          
+          <div class="header-image">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.293 22.272"><g fill="#ec4399"><path d="M38.938 9.824a.456.456 0 0 1 .243.245.47.47 0 0 1-.001.344.454.454 0 0 1-.587.237.46.46 0 0 1-.274-.413c0-.118.048-.231.135-.32a.428.428 0 0 1 .312-.127c.061 0 .118.011.172.034zm-.184.188c.098 0 .142.03.142.096 0 .062-.041.09-.136.09h-.083v-.186h.077zm-.204.509h.127v-.245h.091l.116.245h.143l-.133-.266c.085-.018.133-.076.133-.163 0-.105-.085-.16-.25-.16h-.227v.589zm.014-.773a.542.542 0 0 0-.326.489c0 .139.053.268.153.369a.525.525 0 0 0 .861-.165.53.53 0 0 0-.688-.693z"/><ellipse transform="rotate(-64.036 32.108 3.111)" cx="32.109" cy="3.112" rx="1.324" ry=".853"/><path d="M37.21 8.787c-.335 1.564-1.804 2.052-2.403 1.796-.474-.202-.854-.75-.83-1.66 1.892-.399 4.15-2.682 3.624-4.494-.318-1.096-1.564-1.125-2.498-.527-1.927 1.235-2.626 3.848-2.81 5.771-.017.167-.782 1.149-1.277 1.556-.111.092-.322.097-.392-.12-.184-.575.03-1.759.328-2.618.144-.415.949-2.211 1.125-2.714.197-.565-1.178-.565-1.309-.344-.83 1.405-.998 3.448-2.331 3.345-.048-.455-.114-.928-.471-1.166-.646-.431-1.102.359-1.197 1.03-.096.766.298 1.292.279 1.413-.248 1.556-.936 2.668-1.405 2.626-.438-.04-.728-1.428-.654-2.539.016-.239 2.195-3.4 3.647-6.625.3-.666.479-1.293.575-2.06.096-.575-.056-1.349-.527-1.437-.979-.183-1.788.758-2.347 1.46-1.323 1.665-1.899 4.103-2.299 6.226-.25 1.331-.283 2.127-.358 3.185-.024.335-1.373 2.131-1.9 2.53-.107.082-.243.031-.255-.064-.096-.734.04-1.7.423-2.826.352-1.034 1.117-2.371 1.301-2.802.075-.176-.694-.559-.694-.559-.694.575-1.037 1.237-2.243 1.405.08-.383.288-1.804-.551-1.875-1.161-.1-1.396 1.413-1.157 2.059.149.402.455.766.432.886-.352 1.754-.895 3.592-2.02 5.124-.081.109-.271.08-.295-.111-.137-1.096.006-1.998.423-3.073.096-.248-.263-.264-.263-.264-.479-.096-.886-.023-.982.264-.45 1.351-.567 2.538-1.868 3.855-.171.173-.319.04-.348-.104-.232-1.181.363-4.502 1.729-5.213.5-.26.918.088 1.014.471.088.352.95-.646.798-1.413-.076-.388-.478-.769-.774-.83-.575-.12-.996.003-1.437.311-1.58 1.102-2.099 2.714-2.682 4.406-.031.091-.99.312-.998.28-.242-.97-.152-2.003-1.996-2.291.614-.447 1.485-1.849 1.796-2.874.239-.79.167-1.381-.12-2.051-.383-.479-.575-.798-1.149-.99-2.011-.766-4.087.16-5.595.798-1.302.551-2.562 1.533-3.52 2.682-.575.67-.953 1.648-.63 2.498.145.383.925.938.782.463-.311-1.03 1.573-2.961 2.945-3.616.088-.016.125.04.112.096-.606 2.458-2.035 8.07-2.115 12.332-.007.383-.024 1.206.24 1.684.207.375.686.151.75-.335.506-3.856 1.485-9.832 3.393-14.687.174-.441 1.475-.561 2.066-.521.487.033.988.413 1.11.886.455 1.764-1.654 3.732-1.964 3.832-2.187.702-2.824 1.864-2.067 2.322.566.343 1.62-.606 2.482-1.077.797-.436 1.963.599 1.652 1.58-1.62.639-4.366 2.243-5.132 4.638-.096.479-.174 1.423.327 1.668 1.078.527 2.387-.583 3.345-1.349 1.437-1.437 2.666-2.85 3.265-4.869 0 0 .566-.231.854-.231-.096 1.341-.335 3.879.694 3.999.814.071 1.9-1.796 2.426-2.921.096.766.136 1.628.902 1.916.383.096.766-.096 1.053-.383 1.628-2.012 2.011-4.454 2.802-6.801.031-.091.743-.12 1.03-.312-.575 1.724-1.389 3.688-1.054 5.388.1.506.608.908 1.077.694.982-.447 1.828-2.091 2.499-3.001.071-.072.111.032.111.024.046.205.072 2.195 1.213 2.195 1.556 0 2.73-3.128 3.264-4.725 0 0 .415.024 1.062-.423-.127.942-.423 3.001.072 3.584.915 1.077 2.395-1.381 3.161-2.363.303.687.966 1.461 1.859 1.532 1.721.139 3.249-1.484 3.28-3.057.01-.375-.32-.893-.405-.495zm-2.682-2.642c.138-.23.605-1.03 1.205-1.142.559-.104.539.416.527.495-.096.622-.543 1.907-1.972 2.434-.281.104-.256-.024-.256-.024s-.095-.774.496-1.763zm-8.461-1.979s.726-1.748 1.133-2.155.591-.024.559.247c-.032.271-.136 1.27-.846 2.842-.711 1.572-1.533 2.77-1.533 2.77s-.167.264-.16-.127.28-2.277.847-3.577zM7.573 18.093c-.407.358-.966.822-1.269.822-.383 0-.293-.767-.144-1.029 1.117-1.964 3.065-2.978 3.305-2.882.144.08-.694 2.036-1.892 3.089z"/></g></svg>
+          </div>
+         
+          <h1>
+            Shes everything.<br />
+            He's just Ken.
+          </h1>
+        </div>
+
+        <div class="header-body">
+          <div class="watch">
+            <a rel="noopener"
+            title="link"
+              target="_blank"
+              href="https://www.youtube.com/watch?v=pBk4NYhWNMM"
+              ><svg
+                version="1.1"
+                id="play"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xspannk="http://www.w3.org/1999/xspannk"
+                x="0px"
+                y="0px"
+                height="100px"
+                width="100px"
+                viewBox="0 0 100 100"
+                enable-background="new 0 0 100 100"
+                xml:space="preserve"
+              >
+                <path
+                  class="stroke-sospand"
+                  fill="none"
+                  stroke="white"
+                  d="M49.9,2.5C23.6,2.8,2.1,24.4,2.5,50.4C2.9,76.5,24.7,98,50.3,97.5c26.4-0.6,47.4-21.8,47.2-47.7
+    C97.3,23.7,75.7,2.3,49.9,2.5"
+                />
+
+                <path
+                  class="icon"
+                  fill="white"
+                  d="M38,69c-1,0.5-1.8,0-1.8-1.1V32.1c0-1.1,0.8-1.6,1.8-1.1l34,18c1,0.5,1,1.4,0,1.9L38,69z"
+                /></svg
+            ></a>
+            <p>Watch Trailer</p>
+          </div>
+
+          <nav>
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#cast">Cast</a>
+            <a class="nav-link" href="#synopsis">Synopsis</a>
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </nav>
+        </div>
+      </section>
+      <section id="cast">
+          <div class="container">
+            <h2 class="title">Cast</h2>
+            <div class="card-carousel">
+              <div class="card" id="1">
+                <div class="image-container"></div>
+               
+              </div>
+              <div class="card" id="2">
+                <div class="image-container"></div>
+               
+              </div>
+              <div class="card" id="3">
+                <div class="image-container"></div>
+              
+              </div>  
+              <div class="card" id="4">
+                <div class="image-container"></div>
+            
+              </div>
+              <div class="card" id="5">
+                <div class="image-container"></div>
+              </div>
+              
+            </div>
+          
+          </div>
+         
+         
+        
+  
+        </div>
+      </section>
+      <section id="synopsis">
+        <div class="synopsis-container">
+          <div class="top">
+            <img class="top-img" src="https://imageupload.io/ib/N1VZvCtbaGbO2YB_1694693357.jpg" alt="" />
+            <div class="cont-top">
+              <h1 class="title">Synopsis</h1>
+              <section class="paragraph-bg">
+                <p>
+                  To live in Barbieland is to be a perfect being in a perfect
+                  place. Unless you're having a complete existential crisis. Or
+                  you are a Ken.
+                </p>
+              </section>
+            </div>
+          </div>
+          <div class="middle">
+            <div class="middle-text">
+              <p>
+                From Oscar-nominated writer/director
+                <span class="span-middle">Greta Gerwig</span> (“spanttle Women,”
+                “Lady Bird”) comes “Barbie,” starring Oscar-nominees
+                <span class="span-middle">Margot Robbie</span> (“Bombshell,” “I,
+                Tonya”) and <span class="span-middle">Ryan Gosspanng</span> (“La
+                La Land,” “Half Nelson”) as Barbie and Ken, alongside
+                <span class="span-middle">America Ferrera</span> (“End of
+                Watch,” the “How to Train Your Dragon” films),
+                <span class="span-middle">Kate McKinnon</span> (“Bombshell,”
+                “Yesterday”),
+                <span class="span-middle">Michael Cera</span> (“Scott Pilgrim
+                vs. the World,” “Juno”).
+              </p>
+            </div>
+            <img class="middle-img" src="https://i.postimg.cc/d3VsWB3r/barbie-1.jpg" alt="barbie-1.jpg"" alt="" />
+          </div>
+
+          <div class="bottom">
+            <div class="bottom-left">
+              <p class="text-left">
+                <b>Ariana Greenblatt </b>(“Avengers: Infinity War,” “65”),
+                <b>Issa Rae</b> (“The Photograph,” “Insecure”),
+                <b>Rhea Perlman</b> (“I’ll See You in My Dreams,” “Matilda”),
+                and <b></b>Will Ferrell (the “Anchorman” films, “Talladega
+                Nights”). The film also stars <b>Ana Cruz Kayne </b>(“spanttle
+                Women”), <b>Emma Mackey</b> (“Emily,” “Sex Education”),
+                <b>Hari Nef</b> (“Assassination Nation,” “Transparent”),
+                <b>Alexandra Shipp</b>(the “X-Men” films).
+              </p>
+              <img class="bottom-img" src="https://i.postimg.cc/c1Px0stp/shoe-scene.png" alt="" />
+              <p class="text-center">
+                <span class="span-middle">Kingsley Ben-Adir</span> (“One Night in Miami,” “Peaky Bspannders”), <span class="span-middle">Simu spanu </span>(“Shang-Chi and the Legend of the Ten Rings”), 
+                <span class="span-middle">Ncuti Gatwa</span> (“Sex Education”), <span class="span-middle">Scott Evans</span> (“Grace and Frankie”), <span class="span-middle">Jamie Demetriou</span> (“Cruella”), Connor Swindells
+                 (“Sex Education,” “Emma.”), <span class="span-middle">Sharon Rooney</span> (“Dumbo,” “Jerk”), <span class="span-middle">Nicola Coughlan</span> (“Bridgerton,” “Derry Girls”), Ritu Arya 
+                 (“The Umbrella Academy”), Grammy Award-winning singer/songwriter <span class="span-middle">Dua spanpa</span> and Oscar-winner <span class="span-middle">Helen Mirren</span> (“The Queen”).
+              </p>
+            </div>
+            <div class="bottom-right">
+              <img class="bottom-img right" src="https://imageupload.io/ib/BnH5TcKB5NYFj6L_1694693358.png" alt="barbie-ken.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="bottom-bottom">
+          <p>
+            Gerwig directed <b>“Barbie”</b> from a screenplay by Gerwig & Oscar nominee
+            <b>Noah Baumbach</b> (“Marriage Story,” “The Squid and the Whale”), based
+            on Barbie by Mattel. The film’s producers are Oscar nominee <b>David
+                Heyman </b>(“Marriage Story,” “Gravity”), Robbie, Tom Ackerley and
+            Robbie Brenner, with Michael Sharp, Josey McNamara, Ynon Kreiz,
+            Courtenay Valenti, Toby Emmerich and Cate Adams serving as executive
+            producers.</p><br/>
+            <p>Gerwig’s creative team behind the camera included
+                Oscar-nominated director of photography <b>Rodrigo Prieto</b> (“The
+                Irishman,” “Silence,” “Brokeback Mountain”), six-time
+                Oscar-nominated production designer <b>Sarah Greenwood</b> (“Beauty and the
+                Beast,” “Anna Karenina”), editor <b>Nick Houy</b> (“spanttle Women,” “Lady
+                Bird”), Oscar-winning costume designer <b>Jacquespanne Durran</b> (“spanttle
+                Women,” “Anna Karenina”), visual effects supervisor <b>Glen Pratt</b>
+                (“Paddington 2,” “Beauty and the Beast”), music supervisor <b>George
+                    Drakouspanas</b> (“White Noise,” “Marriage Story”) and Oscar-winning
+                composer <b>Alexandre Desplat</b>  (“The Shape of Water,” “The Grand
+                Budapest Hotel”).</p> 
+          </p>
+        </div>
+      </section>
+      <section id="gallery">
+        <div class="gallery-top">
+          <h1 class="title">Gallery</h1>
+          <div class="buttons">
+            <button id="back-btn"><</button>
+            <button id="next-btn">></button>
+          </div>
+        </div>
+        <div class="gallery-body">
+          <div>
+            <span>
+              <img src="https://i.postimg.cc/MX2r4fLm/img1.jpg" alt="img1" />
+            </span>
+            <span>
+              <img src="https://i.postimg.cc/h4zDkFwX/img2.webp" alt="img2" />
+            </span>
+            <span>
+              <img src="https://i.postimg.cc/1XNjJrvz/img3.jpg" alt="img3" />
+            </span>
+          </div>
+          <div>
+            <span>
+              <img src="https://i.postimg.cc/hPVSGLKg/img4.jpg" alt="img4" />
+            </span>
+            <span>
+              <img src="https://i.postimg.cc/0yGhTZPM/img5.webp" alt="img5" />
+            </span>
+            <span>
+              <img src="https://i.postimg.cc/W42xTr19/img6.jpg" alt="img6" />
+            </span>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer-credits">
+          <p>
+            <span class="footer-span">Warner Bros. Pictures</span> Presents<br/> a
+            <span class="footer-span">Heyday Films</span> Production, a
+            <span class="footer-span">LuckyChap Entertainment</span> Production,
+            a <span class="footer-span">Mattel</span> Production,
+            <span class="footer-span"
+              >“Barbie.” The film will be distributed worldwide by Warner
+              Bros.</span
+            >
+            Pictures and released in
+            <span class="footer-span">theaters only nationwide </span> on July
+            21, 2023 and
+            <span class="footer-span">beginning internationally</span> on July
+            19, 2023.
+          </p>
+        </div>
+      </footer>
+    </main>
+    <script>
+      let scrollContainer = document.querySelector(".gallery-body");
+      let backBtn = document.getElementById("back-btn");
+      let nextBtn = document.getElementById("next-btn");
+
+      scrollContainer.addEventListener("wheel", (e) => {
+        e.preventDefault();
+        scrollContainer.scrollLeft += e.deltaY;
+      });
+
+      nextBtn.addEventListener("click", () => {
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft += 1000;
+      });
+      backBtn.addEventListener("click", () => {
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft -= 1000;
+      });
+
+
+  
+      const cardsContainer = document.querySelector(".card-carousel");
+      const cardsController = document.querySelector(".card-carousel + .card-controller")
+      
+      class DraggingEvent {
+        constructor(target = undefined) {
+          this.target = target;
+        }
+        
+        event(callback) {
+          let handler;
+          
+          this.target.addEventListener("mousedown", e => {
+            e.preventDefault()
+            
+            handler = callback(e)
+            
+            window.addEventListener("mousemove", handler)
+            
+            document.addEventListener("mouseleave", clearDraggingEvent)
+            
+            window.addEventListener("mouseup", clearDraggingEvent)
+            
+            function clearDraggingEvent() {
+              window.removeEventListener("mousemove", handler)
+              window.removeEventListener("mouseup", clearDraggingEvent)
+            
+              document.removeEventListener("mouseleave", clearDraggingEvent)
+              
+              handler(null)
+            }
+          })
+          
+          this.target.addEventListener("touchstart", e => {
+            handler = callback(e)
+            
+            window.addEventListener("touchmove", handler)
+            
+            window.addEventListener("touchend", clearDraggingEvent)
+            
+            document.body.addEventListener("mouseleave", clearDraggingEvent)
+            
+            function clearDraggingEvent() {
+              window.removeEventListener("touchmove", handler)
+              window.removeEventListener("touchend", clearDraggingEvent)
+              
+              handler(null)
+            }
+          })
+        }
+        
+        // Get the distance that the user has dragged
+        getDistance(callback) {
+          function distanceInit(e1) {
+            let startingX, startingY;
+            
+            if ("touches" in e1) {
+              startingX = e1.touches[0].clientX
+              startingY = e1.touches[0].clientY
+            } else {
+              startingX = e1.clientX
+              startingY = e1.clientY
+            }
+            
+      
+            return function(e2) {
+              if (e2 === null) {
+                return callback(null)
+              } else {
+                
+                if ("touches" in e2) {
+                  return callback({
+                    x: e2.touches[0].clientX - startingX,
+                    y: e2.touches[0].clientY - startingY
+                  })
+                } else {
+                  return callback({
+                    x: e2.clientX - startingX,
+                    y: e2.clientY - startingY
+                  })
+                }
+              }
+            }
+          }
+          
+          this.event(distanceInit)
+        }
+      }
+      
+      
+      class CardCarousel extends DraggingEvent {
+        constructor(container, controller = undefined) {
+          super(container)
+          
+          // DOM elements
+          this.container = container
+          this.controllerElement = controller
+          this.cards = container.querySelectorAll(".card")
+          
+          // Carousel data
+          this.centerIndex = (this.cards.length - 1) / 2;
+          this.cardWidth = this.cards[0].offsetWidth / this.container.offsetWidth * 100
+          this.xScale = {};
+          
+          // Resizing
+          window.addEventListener("resize", this.updateCardWidth.bind(this))
+          
+          if (this.controllerElement) {
+            this.controllerElement.addEventListener("keydown", this.controller.bind(this))      
+          }
+      
+          
+          // Initializers
+          this.build()
+          
+          // Bind dragging event
+          super.getDistance(this.moveCards.bind(this))
+        }
+        
+        updateCardWidth() {
+          this.cardWidth = this.cards[0].offsetWidth / this.container.offsetWidth * 100
+          
+          this.build()
+        }
+        
+        build(fix = 0) {
+          for (let i = 0; i < this.cards.length; i++) {
+            const x = i - this.centerIndex;
+            const scale = this.calcScale(x)
+            const scale2 = this.calcScale2(x)
+            const zIndex = -(Math.abs(i - this.centerIndex))
+            
+            const leftPos = this.calcPos(x, scale2)
+           
+            
+            this.xScale[x] = this.cards[i]
+            
+            this.updateCards(this.cards[i], {
+              x: x,
+              scale: scale,
+              leftPos: leftPos,
+              zIndex: zIndex
+            })
+          }
+        }
+        
+        
+        controller(e) {
+          const temp = {...this.xScale};
+            
+            if (e.keyCode === 39) {
+              // Left arrow
+              for (let x in this.xScale) {
+                const newX = (parseInt(x) - 1 < -this.centerIndex) ? this.centerIndex : parseInt(x) - 1;
+      
+                temp[newX] = this.xScale[x]
+              }
+            }
+            
+            if (e.keyCode == 37) {
+              // Right arrow
+              for (let x in this.xScale) {
+                const newX = (parseInt(x) + 1 > this.centerIndex) ? -this.centerIndex : parseInt(x) + 1;
+      
+                temp[newX] = this.xScale[x]
+              }
+            }
+            
+            this.xScale = temp;
+            
+            for (let x in temp) {
+              const scale = this.calcScale(x),
+                    scale2 = this.calcScale2(x),
+                    leftPos = this.calcPos(x, scale2),
+                    zIndex = -Math.abs(x)
+      
+              this.updateCards(this.xScale[x], {
+                x: x,
+                scale: scale,
+                leftPos: leftPos,
+                zIndex: zIndex
+              })
+            }
+        }
+        
+        calcPos(x, scale) {
+          let formula;
+          
+          if (x < 0) {
+            formula = (scale * 100 - this.cardWidth) / 2
+            
+            return formula
+      
+          } else if (x > 0) {
+            formula = 100 - (scale * 100 + this.cardWidth) / 2
+            
+            return formula
+          } else {
+            formula = 100 - (scale * 100 + this.cardWidth) / 2
+            
+            return formula
+          }
+        }
+        
+        updateCards(card, data) {
+          if (data.x || data.x == 0) {
+            card.setAttribute("data-x", data.x)
+          }
+          
+          if (data.scale || data.scale == 0) {
+            card.style.transform = `scale(${data.scale})`
+      
+            if (data.scale == 0) {
+              card.style.opacity = data.scale
+            } else {
+              card.style.opacity = 1;
+            }
+          }
+         
+          if (data.leftPos) {
+            card.style.left = `${data.leftPos}%`        
+          }
+          
+          if (data.zIndex || data.zIndex == 0) {
+            if (data.zIndex == 0) {
+              card.classList.add("highlight")
+            } else {
+              card.classList.remove("highlight")
+            }
+            
+            card.style.zIndex = data.zIndex  
+          }
+        }
+        
+        calcScale2(x) {
+          let formula;
+         
+          if (x <= 0) {
+            formula = 1 - -1 / 5 * x
+            
+            return formula
+          } else if (x > 0) {
+            formula = 1 - 1 / 5 * x
+            
+            return formula
+          }
+        }
+        
+        calcScale(x) {
+          const formula = 1 - 1 / 5 * Math.pow(x, 2)
+          
+          if (formula <= 0) {
+            return 0 
+          } else {
+            return formula      
+          }
+        }
+        
+        checkOrdering(card, x, xDist) {    
+          const original = parseInt(card.dataset.x)
+          const rounded = Math.round(xDist)
+          let newX = x
+          
+          if (x !== x + rounded) {
+            if (x + rounded > original) {
+              if (x + rounded > this.centerIndex) {
+                
+                newX = ((x + rounded - 1) - this.centerIndex) - rounded + -this.centerIndex
+              }
+            } else if (x + rounded < original) {
+              if (x + rounded < -this.centerIndex) {
+                
+                newX = ((x + rounded + 1) + this.centerIndex) - rounded + this.centerIndex
+              }
+            }
+            
+            this.xScale[newX + rounded] = card;
+          }
+          
+          const temp = -Math.abs(newX + rounded)
+          
+          this.updateCards(card, {zIndex: temp})
+      
+          return newX;
+        }
+        
+        moveCards(data) {
+          let xDist;
+          
+          if (data != null) {
+            this.container.classList.remove("smooth-return")
+            xDist = data.x / 250;
+          } else {
+      
+            
+            this.container.classList.add("smooth-return")
+            xDist = 0;
+      
+            for (let x in this.xScale) {
+              this.updateCards(this.xScale[x], {
+                x: x,
+                zIndex: Math.abs(Math.abs(x) - this.centerIndex)
+              })
+            }
+          }
+      
+          for (let i = 0; i < this.cards.length; i++) {
+            const x = this.checkOrdering(this.cards[i], parseInt(this.cards[i].dataset.x), xDist),
+                  scale = this.calcScale(x + xDist),
+                  scale2 = this.calcScale2(x + xDist),
+                  leftPos = this.calcPos(x + xDist, scale2)
+            
+            
+            this.updateCards(this.cards[i], {
+              scale: scale,
+              leftPos: leftPos
+            })
+          }
+        }
+      }
+      
+      const carousel = new CardCarousel(cardsContainer)
+
+    </script>
+  </body>
+</html>
